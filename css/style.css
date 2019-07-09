@@ -1,13 +1,12 @@
 * {
 	box-sizing: border-box;
-	margin:0;
 	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
  	
 	}
 
-a {
-	text-decoration: none;
-}	
+	
 
 body {
 	
@@ -31,11 +30,18 @@ header img{
 	padding:1em;
 }
 
+h3 {
+	color:green;
+}
+
 footer {
+	text-align: center;
 	margin: 0 auto;
 	width:95%;
 	
 }
+
+
 
 
 
@@ -54,29 +60,56 @@ footer {
 
 
 
-.container {
+.banner-title {
+	color:blue;
+	transform: rotate(45deg);
 	
+	margin-top: 50%;
+
 }
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 
 .item{
-float: left;
-}
 
-.item img {
-	width:25%;
-	float: left;
+width:40%;
 }
 
 
 
 
 
-	
+.item img{
+	width:100%;
+	-webkit-animation-name: slide; /* Safari 4.0 - 8.0 */
+  	-webkit-animation-duration: 40s; /* Safari 4.0 - 8.0 */
+  	animation-name: slide;
+  	animation-duration: 40s;
+  	height: 100vw;
+}
 
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes slide {
+  from {height: 0vw;}
+  to {height: 100%;}
+}
+
+/* Standard syntax */
+@keyframes slide {
+  from {height: 0vw;}
+  to {height: 100%;}
+}
 
 
 
 @media screen and (max-width: 700px){
+	header img{ 
+	width:20em;
+}
 
 }
 
